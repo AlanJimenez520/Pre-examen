@@ -1,0 +1,33 @@
+/* Establecer el contenedor principal para que ocupe toda la altura disponible */
+body {
+    height: 100%; /* Asegura que el body ocupe toda la altura */
+    margin: 0; /* Eliminar márgenes */
+    display: flex; /* Habilitar el uso de Flexbox */
+    flex-direction: column; /* Apilar el contenido en columnas (cuerpo y footer) */
+}
+
+/* Contenedor de las cartas */
+.container {
+    display: flex;
+    flex-direction: row; /* Las cartas en fila */
+    gap: 15px; /* Espacio entre las cartas */
+    flex-wrap: wrap; /* Permite que las cartas se ajusten a una nueva línea si no hay suficiente espacio */
+    padding: 20px; /* Espaciado interior del contenedor */
+    flex: 1; /* El contenedor ocupará todo el espacio disponible */
+}
+
+/* Estilo para cada carta */
+.card {
+    margin-top: 20px;
+    flex-grow: 1;
+    flex-basis: 10;
+}
+
+/* Si deseas que el footer se quede abajo, puedes aplicar el siguiente estilo adicional */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    top: 90%; /* Esto empuja el footer hacia abajo */
+}
